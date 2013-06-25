@@ -1,0 +1,35 @@
+<%= form_for(@prod) do |f| %>
+  <% if @prod.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prod.errors.count, "error") %> prohibited this prod from being saved:</h2>
+
+      <ul>
+      <% @prod.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row collapse">
+    <div class="small-3 columns">
+      <%= f.label :name,
+      :class=>"right inline" %>
+    </div>
+
+    <div class="small-9 columns"><%= f.text_field :name %>
+  </div>
+  <div class="row collapse">
+    <div class="small-3 columns">
+      <%= f.label :price, :class=> "right inline" , :title=> "price in USD" , :data=> {:tooltip=> true} %>
+    </div>
+
+    <div class="small-9 columns"><%= f.text_field :price %>
+  </div
+  <div class="row">
+    <div class="small-9 small-offset-3 columns "><%= f.submit %>
+    </div>
+
+    
+  </div>
+<% end %>
