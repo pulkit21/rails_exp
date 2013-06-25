@@ -9,7 +9,7 @@ development:
   database: sto_development
   pool: 5
   username: root
-  password: QaZwerty
+  password: newpwd
  
 
 # Warning: The database defined as "test" will be erased and
@@ -21,7 +21,7 @@ test:
   database: sto_test
   pool: 5
   username: root
-  password: QaZwerty
+  password: newpwd
  
 
 production:
@@ -30,5 +30,5 @@ production:
   database: sto_production
   pool: 5
   username: root
-  password: QaZwerty
+  password: newpwd
 
